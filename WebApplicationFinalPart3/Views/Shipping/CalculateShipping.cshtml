@@ -1,0 +1,30 @@
+﻿@model WebApplicationFinalPart3.IShippingService
+
+@{
+    ViewData["Title"] = "CalculateShipping";
+}
+
+<h2>CalculateShipping</h2>
+
+<div>
+    <h4>IShippingService</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippingDistance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShippingDistance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumRefuels)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumRefuels)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,18 @@
+﻿@Model  ShippingControllerViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("CalculateShipping", "Shipping", FormMethod.Post))
+{
+@Html.Label("Zipcode")
+@Html.TextBox("FromZip", null, new { @class = "form-control" })
+@Html.Label("Shipping Methods")
+@Html.DropDownList("ShippingMethods",
+    new SelectList(Model.DDLOfVehicles),
+    new { @class = "form-control" })
+
+    <input class="btn btn-default" type="submit" name="Calculate Shipping" >
+}
